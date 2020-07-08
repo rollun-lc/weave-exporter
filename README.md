@@ -17,3 +17,14 @@ You can customize some parameters of exporter, in .env file before installation
 | WEAVE_METRICS_HOST   	        | host of weave metrics   	            |   localhost:6782      |
 | WEAVE_SCRAPE_INTERVAL   	    | scrape interval in sec               	|   15                  |
 | INSTANCE_NAME   	            | instance tag for prometheus           |   output of ```sh -c hostname```              |
+
+#### Installation
+
+For ubuntu 16+
+
+Just run
+```shell script
+sudo sh install.sh 
+``` 
+
+It will add service to systemd
