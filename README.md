@@ -5,7 +5,7 @@ If Your prometheus is in docker container, and You want to collect metrics, You 
 #### Requirements
 - nodejs 10+, npm 6+ available
 - weave net running
-- prometheus running in docker image in weave net
+- prometheus running in [docker container](https://prometheus.io/docs/prometheus/latest/installation/) in weave net
 - prometheus push gateway running in [docker container](https://github.com/prometheus/pushgateway#using-docker)
 
 #### Settings
