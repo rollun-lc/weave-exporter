@@ -1,12 +1,12 @@
 const {exec, execSync} = require('child_process');
 const axios = require('axios');
 
-exec(`weave dns-lookup ${process.env.PROP_PUSHGATEWAY_HOSTNAME || 'prom-pushgateway:9091'}`, (error, stdout, stderr) => {
+exec(`weave dns-lookup ${process.env.PROP_PUSHGATEWAY_HOSTNAME || 'prom-pushgateway'}`, (error, stdout, stderr) => {
     console.log('prom-pushgateway ip:', stdout);
     if (error !== null) {
       console.log(`exec error: ${error}`);
     }
-    const prom_pushgateway_ip = stdout.trim();
+    const prom_pushgateway_ip = stdout.trim() + ':9091';
     const interval = +(process.env.WEAVE_SCRAPE_INTERVAL || '15');
     const instance = `${(process.env.INSTANCE_NAME || execSync('hostname'))}`.trim();
     console.log(`starting exporter: proppush: ${prom_pushgateway_ip}, hostname: ${instance}, interval: ${interval}, metrics host: ${process.env.WEAVE_METRICS_HOST}`);
