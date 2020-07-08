@@ -3,6 +3,7 @@
 If Your prometheus is in docker container, and You want to collect metrics, You can use this exporter
 
 #### Requirements
+- nodejs 10+, npm 6+ available
 - weave net running
 - prometheus running in docker image in weave net
 - prometheus push gateway running in [docker container](https://github.com/prometheus/pushgateway#using-docker)
