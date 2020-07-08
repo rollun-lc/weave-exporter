@@ -29,3 +29,5 @@ sudo sh install.sh
 ``` 
 
 It will add service to systemd
+To restart, run script one more time
+
