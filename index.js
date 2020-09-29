@@ -1,7 +1,7 @@
 const {execSync} = require('child_process');
 const axios = require('axios');
 
-const prom_pushgateway_ip = execSync(`weave dns-lookup ${process.env.PROM_PUSHGATEWAY_HOSTNAME || 'prom-pushgateway'}`).trim() + ':' + (process.env.PROM_PUSHGATEWAY_PORT || '9091');
+const prom_pushgateway_ip = execSync(`weave dns-lookup ${process.env.PROM_PUSHGATEWAY_HOSTNAME || 'prom-pushgateway'}`).toString().trim() + ':' + (process.env.PROM_PUSHGATEWAY_PORT || '9091');
 const interval = +(process.env.WEAVE_SCRAPE_INTERVAL || '15');
 const instance = `${(process.env.INSTANCE_NAME || execSync('hostname'))}`.trim();
 
