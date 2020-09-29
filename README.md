@@ -14,7 +14,8 @@ You can customize some parameters of exporter, in .env file before installation
 
 | NAME  | Desription  	| default |
 |---	|---	| ---   |
-| PROP_PUSHGATEWAY_HOSTNAME   	| name of pushgateway in weave net   	|   prom-pushgateway    |
+| PROM_PUSHGATEWAY_HOSTNAME   	| name of pushgateway in weave net   	|   prom-pushgateway    |
+| PROM_PUSHGATEWAY_HOSTNAME   	| port of pushgateway in weave net   	|   9091    |
 | WEAVE_METRICS_HOST   	        | host of weave metrics   	            |   localhost:6782      |
 | WEAVE_SCRAPE_INTERVAL   	    | scrape interval in sec               	|   15                  |
 | INSTANCE_NAME   	            | instance tag for prometheus           |   output of ```sh -c hostname```              |
