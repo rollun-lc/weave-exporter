@@ -1,3 +1,8 @@
+DEPRECATED!!!
+
+preferred way to export weave metrics -> https://github.com/rollun-lc/weave-metrics-proxy
+
+
 # Prometheus weave exporter
 
 If Your prometheus is in docker container, and You want to collect metrics, You can use this exporter
